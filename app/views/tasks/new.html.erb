@@ -1,0 +1,15 @@
+<div class="row ms-3">
+  <h1 class="m-4 ms-3">Create a new task</h1>
+  <div class="col-6">
+
+    <%= render "form", task: @task %>
+
+    <br>
+    <div class="ms-3">
+      <%= link_to tasks_path, class:"text-decoration-none" do %>
+      <span><i class="fa-solid fa-clock-rotate-left"></i> Back to list</span>
+      <% end %>
+    </div>
+
+  </div>
+</div>

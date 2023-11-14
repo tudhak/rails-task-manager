@@ -1,0 +1,32 @@
+<div class="row ms-3">
+  <div class="col-6 d-flex align-items-center justify-content-between">
+
+    <h1 class="m-4 ms-3"><%= @task.title %></h1>
+    <div class="border border-secondary rounded p-2">
+      <i class="fa-solid fa-pencil"></i>
+      <%= link_to 'Edit this task', edit_task_path, class:"text-decoration-none text-dark" %>
+    </div>
+
+  </div>
+</div>
+
+<div class="row ms-3">
+  <div class="col-6">
+
+    <p class="ms-3 alert alert-secondary"><%= @task.details %></p>
+    <p class="ms-3">
+    <%if @task.completed %>
+      <i class="fa-regular fa-square-check"></i>
+    <% else %>
+      <i class="fa-regular fa-square"></i>
+    <% end %>
+    <%= @done %></p>
+
+    <div class="ms-3">
+    <%= link_to tasks_path, class:"text-decoration-none" do %>
+    <span><i class="fa-solid fa-clock-rotate-left"></i> Back to list</span>
+    <% end %>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<%= form_with model: task, class:"ms-3" do |f| %>
+  <%= f.label :title, class:"h6" %>
+  <%= f.text_field :title, class:"form-control mb-3" %>
+  <%= f.label :details, class:"h6" %>
+  <%= f.text_area :details, size: "70x3", class:"form-control mb-3" %>
+  <% if action_name == 'edit' %>
+    <div>
+      <%= f.check_box :completed %>
+      <%= f.label :completed, class:"h6 mb-4" %>
+    </div>
+  <% end %>
+  <%= f.submit class:"btn btn-primary" %>
+<% end %>
